@@ -2,7 +2,7 @@ var ObjectID = require('mongodb').ObjectID;
 
 module.exports = function(app, db) {
 
-  app.get('/notes/:id', (req, res) => {
+  app.get('/api/notes/:id', (req, res) => {
    const id = req.params.id;
    const details = { '_id': new ObjectID(id) };
    db.collection('notes').findOne(details, (err, item) => {
@@ -14,7 +14,7 @@ module.exports = function(app, db) {
    });
  });
 
- app.delete('/notes/:id', (req, res) => {
+ app.delete('/api/notes/:id', (req, res) => {
     const id = req.params.id;
     const details = { '_id': new ObjectID(id) };
     db.collection('notes').remove(details, (err, item) => {
@@ -26,7 +26,7 @@ module.exports = function(app, db) {
     });
   });
 
-  app.post('/notes', (req, res) => {
+  app.post('/api/notes', (req, res) => {
     // You'll create your note here.
     const note = { text: req.body.body, title: req.body.title };
     db.collection('notes').insert(note, (err, result) => {
@@ -38,7 +38,7 @@ module.exports = function(app, db) {
     });
   });
 
-  app.put('/notes/:id', (req, res) => {
+  app.put('/api/notes/:id', (req, res) => {
     const id = req.params.id;
     const details = { '_id': new ObjectID(id) };
     const note = { text: req.body.body, title: req.body.title };
