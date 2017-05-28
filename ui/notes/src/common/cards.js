@@ -13,8 +13,8 @@ class cards extends Component {
               I am convenient because I require little markup to use effectively.</p>
             </div>
             <div className="card-action">
-              <button className="waves-effect waves-light btn">Update</button>
-              <button className="waves-effect waves-light btn red">Delete</button>
+              <a className="waves-effect waves-light btn">Update</a>
+              <a className="waves-effect waves-light btn red">Delete</a>
             </div>
           </div>
         </div>
