@@ -3,17 +3,26 @@ body
   padding: 0
   font-family: sans-serif
 
+.App
+  background-color: lighten(blue, 60%)
+  padding: 20px
+
 .App-intro
   font-size: large
   display: flex
   flex-direction: row
-  align-items: stretch
+  align-items: flex-start
+  min-height: 555px
   flex-wrap: wrap
 
 .card-view
   padding: 16px 13px
   max-width: 350px
+  border-radius: 50px 50px !important
+  .card
+    border-radius: 50px 50px !important
   .card-action
+    border-radius: 0 0 50px 50px !important
     .btn
       margin: 2px 7px
 

@@ -1,10 +1,11 @@
 import React, {Component} from 'react';
-import Cards from './cards';
+import Cards from './common/cards';
+import Footer from './common/footer'
 
 class App extends Component {
   render() {
     return (
-      <div classNameName="App">
+      <div className="App">
         <nav className="blue">
           <div className="nav-wrapper">
             <a href="#" className="brand-logo right">Posit</a>
@@ -26,9 +27,8 @@ class App extends Component {
           <Cards/>
           <Cards/>
           <Cards/>
-          <Cards/>
-          <Cards/>
         </div>
+        <Footer />
       </div>
     );
   }
