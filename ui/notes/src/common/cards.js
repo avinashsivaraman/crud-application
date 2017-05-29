@@ -1,12 +1,14 @@
 import React, { Component } from 'react';
 
-class cards extends Component {
+const randomColor = ['blue-grey', 'yellow', 'red', 'green', 'purple', 'indigo', 'cyan', 'lime']
 
+class cards extends Component {
   render() {
+    const cardColor = randomColor[Math.floor(Math.random() * randomColor.length)]
     return (
       <div className="hoverable card-view">
         <div className="col s12 m3">
-          <div className="card blue-grey darken-1">
+          <div className={`card ${cardColor} darken-1`}>
             <div className="card-content white-text">
               <span className="card-title">Card Title</span>
               <p>I am a very simple card. I am good at containing small bits of information.
